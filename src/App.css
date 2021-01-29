@@ -1,38 +1,95 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+*
+{
+  box-sizing: border-box;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.weapons
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+  margin: 4rem;
+}
+
+.weapon
+{
+  width: 27vw;
+  height: 40vh;
+  max-width: 37vw;
+  max-height: 40vh;
+  border-radius: 2rem;
+  position: relative;
+  padding: 1rem 2rem;
+  background-color: #333333;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  will-change: box-shadow,transform;
+  transition: all .3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .weapon::before 
+{
+  background: url(static/Fortnite-Logo.png);
+  position: absolute;
+  content: ' ';
+  width: 27vw;
+  height: 40vh;
+  max-width: 37vw;
+  max-height: 40vh;
+} */
+
+.weapon img
+{
+  justify-self: center;
+  align-self: center;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weapon .weapon-data
+{
+  justify-self: center;
+  align-self: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.weapon .weapon-data .name , .weapon .weapon-data .demege
+{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.4rem auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.common
+{
+  box-shadow: 0 0 20px 1px #6A6A6A;
+  background: radial-gradient(#9D9D9D, #6A6A6A);
+}
+
+.uncommon
+{
+  box-shadow: 0 0 20px 1px #1C5817;
+  background: radial-gradient(#59A71C, #1C5817);
+}
+
+.rare
+{
+  box-shadow: 0 0 20px 1px #164987;
+  background: radial-gradient(#27A8E6, #164987);
+}
+
+.epic
+{
+  box-shadow: 0 0 20px 1px #5C2B93;
+  background: radial-gradient(#9E48D8, #5C2B93);
+}
+
+.legendary
+{
+  box-shadow: 0 0 20px 1px #813E1D;
+  background: radial-gradient(#E48922, #813E1D);
 }
