@@ -32,7 +32,7 @@ function Modal({modalIsOpen, modalData, toggleModel}) {
                         </div>
                         { showDescription &&
                             <div className='info description'>
-                                    {modalData.description}
+                                    {!modalData.description ? 'There is no description on this weapon' : modalData.description}
                             </div>
                         }
                         { showStats &&
