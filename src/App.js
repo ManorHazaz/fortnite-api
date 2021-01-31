@@ -35,6 +35,7 @@ function App() {
 				}
 			</div>
 			<Modal modalIsOpen={modalIsOpen} modalData={modalData} toggleModel={toggleModel} />
+			<Biggest weapons={weapons} />
 		</div>
 	);
 }

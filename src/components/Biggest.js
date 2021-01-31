@@ -9,7 +9,7 @@ function Biggest({weapons}) {
     const [BulletsPerCartridge,setBulletsPerCartridge] = useState(0);
     const [Spread,setSpread] = useState(0);
     const [SpreadDownsights,setSpreadDownsights] = useState(0);
-    const [DamageZoneCritical,setDamageZoneCritical] = useState(0);
+    const [DamageZone_Critical,setDamageZone_Critical] = useState(0);
 
     function order() 
     {
@@ -25,7 +25,7 @@ function Biggest({weapons}) {
             {
                 switch (key) {
                     case 'DmgPB':
-                        value > DmgPB && setDmgPB(value)
+                        value > DmgPB & value != 1000 &&  setDmgPB(value)
                         break;
                 
                     case 'FiringRate':
@@ -33,7 +33,7 @@ function Biggest({weapons}) {
                         break;
                 
                     case 'ClipSize':
-                        value > ClipSize && setClipSize(value)
+                        value > ClipSize  & value != 1000000 && setClipSize(value)
                         break;
                 
                     case 'ReloadTime':
@@ -52,8 +52,8 @@ function Biggest({weapons}) {
                         value > SpreadDownsights && setSpreadDownsights(value)
                         break;
                 
-                    case 'DamageZoneCritical':
-                        value > DamageZoneCritical && setDamageZoneCritical(value)
+                    case 'DamageZone_Critical':
+                        value > DamageZone_Critical & value != 0 && setDamageZone_Critical(value)
                         break;
                 
                     default:
@@ -69,7 +69,7 @@ function Biggest({weapons}) {
         console.log('BulletsPerCartridge', BulletsPerCartridge)
         console.log('Spread', Spread)
         console.log('SpreadDownsights', SpreadDownsights)
-        console.log('DamageZoneCritical', DamageZoneCritical)
+        console.log('DamageZone_Critical', DamageZone_Critical)
     }
 
     return (

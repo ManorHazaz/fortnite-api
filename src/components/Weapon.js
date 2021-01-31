@@ -56,7 +56,7 @@ function Weapon({weapon, toggleModel}) {
                 <div className='demege'>{ weapon.mainStats.DmgPB }</div>
                 <div className='bullet-type'>{ bulletType(weapon) }</div>
             </div>
-            {console.log(weapon)}            
+            {console.log(weapon)}          
             <img src={ weapon.images.icon }/>
         </div>
     )
