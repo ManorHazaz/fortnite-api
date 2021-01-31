@@ -1,8 +1,9 @@
 import LightBullets from '../static/Light-bullets.png'; 
 import MediumBullets from '../static/Medium-bullets.png'; 
 import HeavyBullets from '../static/Heavy-bullets.png'; 
+import Modal from './Modal';
 
-function Weapon({weapon}) {
+function Weapon({weapon, toggleModel}) {
 
     function bulletType(weapon) 
     {
@@ -49,19 +50,16 @@ function Weapon({weapon}) {
     }
 
     return (
-        <div className={`weapon ${weapon.rarity}`}>
+        <div className={`weapon ${weapon.rarity}`} onClick={() => toggleModel(weapon) }>
             <div className='weapon-data'>
                 <div className='name'>{ weapon.name }</div>
                 <div className='demege'>{ weapon.mainStats.DmgPB }</div>
                 <div className='bullet-type'>{ bulletType(weapon) }</div>
             </div>
-            {console.log(weapon)}
-            
-            
+            {console.log(weapon)}            
             <img src={ weapon.images.icon }/>
-            
         </div>
-    );
+    )
 }
 
 export default Weapon
