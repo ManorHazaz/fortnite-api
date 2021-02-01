@@ -4,3 +4,8 @@ A Fortnite weapons data created using [Fortnite Api](https://fortniteapi.io/#), 
 
 !["Preview Image"](./screenshots/main.png)
 !["Modal Image"](./screenshots/modal.png)
+
+
+| <!--                                --> | <!--                                --> |
+|-----------------------------------------|-----------------------------------------|
+| !["Preview Mobile Image"](./screenshots/main-mobile.png) | !["Modal Mobile Image"](./screenshots/modal-mobile.png) |
