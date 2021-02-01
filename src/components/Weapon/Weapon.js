@@ -1,7 +1,6 @@
 import LightBullets from '../static/Light-bullets.png'; 
 import MediumBullets from '../static/Medium-bullets.png'; 
 import HeavyBullets from '../static/Heavy-bullets.png'; 
-import Modal from './Modal';
 
 function Weapon({weapon, toggleModel}) {
 

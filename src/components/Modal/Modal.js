@@ -1,7 +1,7 @@
-import {React ,useState} from 'react';
+import { React ,useState } from 'react';
 import ReactDOM from 'react-dom';
-import StatsTable from './StatsTable';
-import Tag from './Tag';
+import { StatsTable } from './components/StatsTable';
+import { Tag } from './components/Tag';
 
 function Modal({modalIsOpen, modalData, toggleModel}) {
     const [showDescription,setShowDescription] = useState(true);

@@ -1,10 +1,10 @@
 import { React , useState, useEffect } from 'react';
 
 import './App.css';
-import Biggest from './components/Biggest';
-import Loader from './components/Loader';
-import Modal from './components/Modal';
-import Weapon from './components/Weapon';
+import { Biggest } from './components/Biggest';
+import { Loader } from './components/Loader';
+import { Modal } from './components/Modal';
+import { Weapon } from './components/Weapon';
 
 function App() {
 	const [weapons,setWeapons] = useState([]);
@@ -27,8 +27,7 @@ function App() {
 
 			root: null,
 			rootMargin: '0px',
-			treshold: .5
-
+			treshold: 1.0
 		};
 
 		const observer = new IntersectionObserver( loadMore, options );
@@ -40,7 +39,6 @@ function App() {
 	function loadMore() 
 	{
 		setLimitWeapons((prevLimitWeapons) => prevLimitWeapons + 21 );
-
 	}
 
 
