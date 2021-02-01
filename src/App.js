@@ -39,6 +39,7 @@ function App() {
 
 	useEffect(() => 
 	{
+		// TODO better solution
 		if(weapons.length != 0)
 		{
 			if( limitWeapons >= weapons.length)

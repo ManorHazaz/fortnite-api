@@ -28,27 +28,27 @@ function Weapon({weapon, toggleModel}) {
         return 'Unknown';
     }
 
-    function bulletTypeImg(bulletType)
-    {
-        switch (bulletType) 
-        {
-            case 'Light bullets':
-                return LightBullets;
-            break;
+    // function bulletTypeImg(bulletType)
+    // {
+    //     switch (bulletType) 
+    //     {
+    //         case 'Light bullets':
+    //             return LightBullets;
+    //         break;
 
-            case 'Medium bullets':
-                return MediumBullets;
-            break;
+    //         case 'Medium bullets':
+    //             return MediumBullets;
+    //         break;
 
-            case 'Heavy bullets':
-                return HeavyBullets;
-            break;
+    //         case 'Heavy bullets':
+    //             return HeavyBullets;
+    //         break;
         
-            default:
-                return LightBullets;
-            break;
-        }
-    }
+    //         default:
+    //             return LightBullets;
+    //         break;
+    //     }
+    // }
 
     return (
         <div className={`weapon ${weapon.rarity}`} onClick={() => toggleModel(weapon) }>
