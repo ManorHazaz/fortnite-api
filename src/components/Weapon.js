@@ -53,10 +53,9 @@ function Weapon({weapon, toggleModel}) {
         <div className={`weapon ${weapon.rarity}`} onClick={() => toggleModel(weapon) }>
             <div className='weapon-data'>
                 <div className='name'>{ weapon.name }</div>
-                <div className='demege'>{ weapon.mainStats.DmgPB }</div>
+                <div className='demege'>{ Math.round(weapon.mainStats.DmgPB) }</div>
                 <div className='bullet-type'>{ bulletType(weapon) }</div>
-            </div>
-            {console.log(weapon)}          
+            </div>  
             <img src={ weapon.images.icon }/>
         </div>
     )

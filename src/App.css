@@ -27,7 +27,7 @@ h1
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 4rem;
-	margin: 4rem;
+	margin: 2.8rem;
 }
 
 .weapon
@@ -53,7 +53,8 @@ h1
 {
     content: "";
     position: absolute;
-    width: 30vw;
+	width: 30vw;
+	max-width: 100px;
     height: 12vh;
     opacity: 0.2;
     top: 85%;
@@ -116,6 +117,18 @@ h1
 {
 	box-shadow: 0 0 20px 1px #813E1D;
 	background: radial-gradient(#f09a37, #813E1D);
+}
+
+.mythic
+{
+	box-shadow: 0 0 20px 1px #655211;
+	background: radial-gradient(#B19538, #655211);
+}
+
+.transcendent
+{
+	box-shadow: 0 0 20px 1px #903135;
+	background: radial-gradient(#BE4B46, #903135);
 }
 
 /* modal */
