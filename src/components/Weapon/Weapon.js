@@ -25,6 +25,46 @@ function Weapon({weapon, toggleModel}) {
             return 'Heavy bullets';
         }
 
+        if(searchTag.includes("Rocket"))
+        {
+            return 'Rockets';
+        }
+
+        if(searchTag.includes("SmallBullet"))
+        {
+            return 'Small Bullets';
+        }
+
+        if(searchTag.includes("Shells"))
+        {
+            return 'Shells';
+        }
+
+        if(searchTag.includes("Grenade"))
+        {
+            return 'Grenades';
+        }
+
+        if(searchTag.includes("Blade"))
+        {
+            return 'Melee';
+        }
+
+        if(searchTag.includes("Bow"))
+        {
+            return 'Arrows';
+        }
+
+        if(searchTag.includes("UtilityItem"))
+        {
+            return 'Utility';
+        }
+
+        if(searchTag.includes("Flare"))
+        {
+            return 'Flares';
+        }
+
         return 'Unknown';
     }
 
