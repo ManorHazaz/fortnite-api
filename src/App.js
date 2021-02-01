@@ -1,7 +1,6 @@
 import { React , useState, useEffect, useRef } from 'react';
 
 import './App.css';
-import { Biggest } from './components/Biggest';
 import { Loader } from './components/Loader';
 import { Modal } from './components/Modal';
 import { Weapon } from './components/Weapon';
@@ -13,6 +12,7 @@ function App() {
 	const [modalData,setModalData] = useState([]);
 	const [limitWeapons, setLimitWeapons] = useState(21);
 
+	// fetching data from api & create observer for the infinite scroll
 	useEffect(() => {
 		function fetchAPI() 
 		{
@@ -37,6 +37,7 @@ function App() {
 
 	}, []);
 
+	// remove loader when all weapons rendered
 	useEffect(() => 
 	{
 		// TODO better solution
@@ -48,13 +49,14 @@ function App() {
 			}
 		}
 	}, [limitWeapons]);
- 
+
+	// increase number of rendered weapons
 	function loadMore() 
 	{
 			setLimitWeapons((prevLimitWeapons) => prevLimitWeapons + 21 );
 	}
 
-
+	// Open and close modal
 	function toggleModel(weapon=[]) 
 	{
 		setModalData(weapon);

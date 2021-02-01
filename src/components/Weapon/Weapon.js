@@ -4,6 +4,7 @@ import './Weapon.css';
 
 function Weapon({weapon, toggleModel}) {
 
+    // determining bullet type based on search tags
     function bulletType(weapon) 
     {
         const searchTag = weapon.searchTags;
@@ -65,28 +66,6 @@ function Weapon({weapon, toggleModel}) {
 
         return 'Unknown';
     }
-
-    // function bulletTypeImg(bulletType)
-    // {
-    //     switch (bulletType) 
-    //     {
-    //         case 'Light bullets':
-    //             return LightBullets;
-    //         break;
-
-    //         case 'Medium bullets':
-    //             return MediumBullets;
-    //         break;
-
-    //         case 'Heavy bullets':
-    //             return HeavyBullets;
-    //         break;
-        
-    //         default:
-    //             return LightBullets;
-    //         break;
-    //     }
-    // }
 
     return (
         <div className={`weapon ${weapon.rarity}`} onClick={() => toggleModel(weapon) }>

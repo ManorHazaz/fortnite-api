@@ -11,6 +11,7 @@ function Biggest({weapons}) {
     const [SpreadDownsights,setSpreadDownsights] = useState(0);
     const [DamageZone_Critical,setDamageZone_Critical] = useState(0);
 
+    // used one time to know the weapon stats limit
     function order() 
     {
         weapons.map( weapon => 
@@ -77,7 +78,6 @@ function Biggest({weapons}) {
             {
                 order()
             }
-            
         </div>
     )
 }
