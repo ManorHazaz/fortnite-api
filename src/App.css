@@ -39,14 +39,6 @@ h1
 		grid-gap: 2rem;
 		margin: 1rem;
 	}
-
-	.weapon 
-	{
-		width: 40vw;
-		height: 55vh;
-		max-height: 220px;
-	}
-
 	.modal .title .tags
 	{
 		grid-template-columns: repeat(3, 1fr);
@@ -61,12 +53,6 @@ h1
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 2rem;
 		margin: 1rem;
-	}
-
-	.weapon 
-	{
-		width: 85vw;
-		max-width: 330px;
 	}
 
 	h1

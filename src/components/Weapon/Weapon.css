@@ -11,10 +11,14 @@
 	text-align: center;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	will-change: box-shadow,transform;
-	transition: all .3s;
 	cursor: pointer;
 	justify-self: center;
+}
+
+.weapon:hover
+{
+	animation: hover 0.5s linear;
+	animation-fill-mode: forwards;
 }
 
 .weapon::before 
@@ -97,4 +101,33 @@
 {
 	box-shadow: 0 0 20px 1px #903135;
 	background: radial-gradient(#BE4B46, #903135);
+}
+
+@keyframes hover {
+	0% {
+	  transform: translate(0, 0);    
+	}
+	100% {
+	  transform: translate(0, -5px);
+	}
+  }
+
+
+@media screen and (max-width: 1024px) 
+{
+	.weapon 
+	{
+		width: 40vw;
+		height: 55vh;
+		max-height: 220px;
+	}
+}
+
+@media screen and (max-width: 600px) 
+{	
+	.weapon 
+	{
+		width: 85vw;
+		max-width: 330px;
+	}
 }

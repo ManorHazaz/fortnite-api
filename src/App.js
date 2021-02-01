@@ -37,16 +37,20 @@ function App() {
 
 	}, []);
 
-	useEffect(() => {
-		if( limitWeapons >= weapons.length)
+	useEffect(() => 
+	{
+		if(weapons.length != 0)
 		{
-			loaderRef.current = '';
+			if( limitWeapons >= weapons.length)
+			{
+				loaderRef.current = '';
+			}
 		}
 	}, [limitWeapons]);
  
 	function loadMore() 
 	{
-			setLimitWeapons((prevLimitWeapons) =>( prevLimitWeapons + 21 ));
+			setLimitWeapons((prevLimitWeapons) => prevLimitWeapons + 21 );
 	}
 
 

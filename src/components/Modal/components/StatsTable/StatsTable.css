@@ -50,3 +50,19 @@
 {
     from { width: 0; }
 }
+
+@media screen and (max-width: 1024px) 
+{
+	.stats table
+    {
+        font-size: 2vh;
+	}
+}
+
+@media screen and (max-width: 600px) 
+{
+	.stats table
+    {
+        font-size: 2.1vh;
+    }
+}
