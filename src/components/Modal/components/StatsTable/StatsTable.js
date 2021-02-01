@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './StatsTable.css';
+
 function StatsTable({stats}) {
 
     const maxStats = {
@@ -44,7 +46,7 @@ function StatsTable({stats}) {
                     Object.entries(stats).map(([key, value]) => 
                         <tr>
                             <td className='stat-key'>{orderStatName(key)}</td>
-                            <td className='stat-value'>{value}</td>
+                            <td className='stat-value'>{key == 'ClipSize' & value == 0 ? '∞' : value}</td>
                             <td className='stat-range'><div className='div-stat-range' style={{ '--percentage': `${ (value/maxStats[key])*100 }%` }}></div></td>
                         </tr>
                     )

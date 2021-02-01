@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { StatsTable } from './components/StatsTable';
 import { Tag } from './components/Tag';
 
+import './Modal.css'
+
 function Modal({modalIsOpen, modalData, toggleModel}) {
     const [showDescription,setShowDescription] = useState(true);
     const [showStats,setShowStats] = useState(false);

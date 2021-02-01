@@ -1,10 +1,11 @@
 import React from 'react';
+
 import './Loader.css';
 
-function Loader() {
+function Loader({loaderRef}) {
     return (
         <div className="loader" > 
-            looting...
+            {loaderRef.current}
         </div>
     )
 }

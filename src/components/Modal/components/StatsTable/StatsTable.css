@@ -1,0 +1,52 @@
+.stats table
+{
+	margin: auto;
+    width: 99%;
+}
+
+.stats .stat-key
+{
+    width: 27%;
+}
+
+.stats .stat-value
+{
+	width: 6%;
+	padding-left: 0.5rem;
+}
+
+.stats .div-stat-range
+{
+	width: 100%;
+}
+
+.stats .div-stat-range
+{
+	vertical-align: inherit;
+	width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10rem;
+    overflow: hidden;
+    height: 5px;
+    margin: 0px 6px;
+    position: relative;
+    display: inline-block;
+}
+
+.stats .div-stat-range::after
+{
+	content: '';
+	vertical-align: inherit;
+	width: var(--percentage);
+    background-color: #5bc686;
+    border-radius: 10rem;
+    overflow: hidden;
+    height: 5px;
+	position: absolute;
+	animation: fill .3s backwards;
+}
+
+@keyframes fill
+{
+    from { width: 0; }
+}

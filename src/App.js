@@ -1,4 +1,4 @@
-import { React , useState, useEffect } from 'react';
+import { React , useState, useEffect, useRef } from 'react';
 
 import './App.css';
 import { Biggest } from './components/Biggest';
@@ -7,6 +7,7 @@ import { Modal } from './components/Modal';
 import { Weapon } from './components/Weapon';
 
 function App() {
+	const loaderRef = useRef('looting...');
 	const [weapons,setWeapons] = useState([]);
 	const [modalIsOpen,setModalIsOpen] = useState(false);
 	const [modalData,setModalData] = useState([]);
@@ -27,7 +28,7 @@ function App() {
 
 			root: null,
 			rootMargin: '0px',
-			treshold: 1.0
+			treshold: 0.5
 		};
 
 		const observer = new IntersectionObserver( loadMore, options );
@@ -35,10 +36,17 @@ function App() {
 		observer.observe(document.querySelector('.loader'));
 
 	}, []);
+
+	useEffect(() => {
+		if( limitWeapons >= weapons.length)
+		{
+			loaderRef.current = '';
+		}
+	}, [limitWeapons]);
  
 	function loadMore() 
 	{
-		setLimitWeapons((prevLimitWeapons) => prevLimitWeapons + 21 );
+			setLimitWeapons((prevLimitWeapons) =>( prevLimitWeapons + 21 ));
 	}
 
 
@@ -60,7 +68,7 @@ function App() {
 				}
 			</div>
 			<Modal modalIsOpen={modalIsOpen} modalData={modalData} toggleModel={toggleModel} />
-			<Loader />
+			<Loader loaderRef={loaderRef}/>
 		</div>
 	);
 }

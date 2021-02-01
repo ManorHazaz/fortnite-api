@@ -1,0 +1,100 @@
+.weapon
+{
+	width: 27vw;
+	height: 40vh;
+    max-width: 550px;
+    max-height: 330px;
+	border-radius: 2rem;
+	position: relative;
+	padding: 1rem 2rem;
+	background-color: #333333;
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	will-change: box-shadow,transform;
+	transition: all .3s;
+	cursor: pointer;
+	justify-self: center;
+}
+
+.weapon::before 
+{
+    content: "";
+    position: absolute;
+	width: 30vw;
+	max-width: 100px;
+    height: 12vh;
+    opacity: 0.2;
+    top: 85%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    background-image: url(../../static/Fortnite-Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.weapon img
+{
+	justify-self: center;
+	align-self: center;
+	width: 100%;
+	min-width: 87px;
+}
+
+.weapon .weapon-data
+{
+	justify-self: center;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.weapon .weapon-data .name , .weapon .weapon-data .demege
+{
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 0.4rem auto;
+}
+
+.common
+{
+	box-shadow: 0 0 20px 1px #6A6A6A;
+	background: radial-gradient(#bbbbbb, #6A6A6A);
+}
+
+.uncommon
+{
+	box-shadow: 0 0 20px 1px #1C5817;
+	background: radial-gradient(#79bd46, #1C5817);
+}
+
+.rare
+{
+	box-shadow: 0 0 20px 1px #164987;
+	background: radial-gradient(#27A8E6, #164987);
+}
+
+.epic
+{
+	box-shadow: 0 0 20px 1px #5C2B93;
+	background: radial-gradient(#b161e6, #5C2B93);
+}
+
+.legendary
+{
+	box-shadow: 0 0 20px 1px #813E1D;
+	background: radial-gradient(#f09a37, #813E1D);
+}
+
+.mythic
+{
+	box-shadow: 0 0 20px 1px #655211;
+	background: radial-gradient(#B19538, #655211);
+}
+
+.transcendent
+{
+	box-shadow: 0 0 20px 1px #903135;
+	background: radial-gradient(#BE4B46, #903135);
+}
