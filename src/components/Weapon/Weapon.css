@@ -13,12 +13,12 @@
 	grid-template-columns: repeat(2, 1fr);
 	cursor: pointer;
 	justify-self: center;
+	transition: 0.3s;
 }
 
 .weapon:hover
 {
-	animation: hover 0.5s linear;
-	animation-fill-mode: forwards;
+	transform:translateY(-7px) ;
 }
 
 .weapon::before 
@@ -102,16 +102,6 @@
 	box-shadow: 0 0 20px 1px #903135;
 	background: radial-gradient(#BE4B46, #903135);
 }
-
-@keyframes hover {
-	0% {
-	  transform: translate(0, 0);    
-	}
-	100% {
-	  transform: translate(0, -5px);
-	}
-  }
-
 
 @media screen and (max-width: 1024px) 
 {
