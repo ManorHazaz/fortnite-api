@@ -1,6 +1,4 @@
-import LightBullets from '../../static/Light-bullets.png'; 
-import MediumBullets from '../../static/Medium-bullets.png'; 
-import HeavyBullets from '../../static/Heavy-bullets.png';
+import FortniteLogo from '../../static/fornite-logo3.png';
 
 import './Weapon.css';
 
@@ -97,7 +95,7 @@ function Weapon({weapon, toggleModel}) {
                 <div className='demege'>{ Math.round(weapon.mainStats.DmgPB) }</div>
                 <div className='bullet-type'>{ bulletType(weapon) }</div>
             </div>  
-            <img src={ weapon.images.icon }/>
+            <img src={ weapon.images.icon ? weapon.images.icon : FortniteLogo }/>
         </div>
     )
 }
