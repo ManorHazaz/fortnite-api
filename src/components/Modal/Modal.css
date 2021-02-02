@@ -78,7 +78,7 @@
     transform: translateX(-50%);
     border-radius: inherit;
 	margin: auto;
-	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 
 .modal .data .tabs
@@ -115,7 +115,8 @@
 .modal .data .info
 {
 	width: 90%;
-	margin: 1rem auto;
+    margin: 1rem auto;
+    font-family: 'Open Sans', sans-serif;
 	
 }
 
