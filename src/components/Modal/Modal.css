@@ -11,7 +11,10 @@
 	background-color: #ffffff;
 	z-index: 999;
 	border-radius: 2rem;
-    animation: pull-up-center .3s ease-out both;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-timing-function: linear;
+	animation-duration: 0.3s;
 }
 
 .overlay
@@ -142,4 +145,13 @@
         width: 40%;
         top: 35%;
     }
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

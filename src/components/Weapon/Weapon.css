@@ -18,7 +18,7 @@
 
 .weapon:hover
 {
-	transform:translateY(-7px) ;
+	transform: translateY(-7px) ;
 }
 
 .weapon::before 
