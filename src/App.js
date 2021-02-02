@@ -53,7 +53,7 @@ function App() {
 	// increase number of rendered weapons
 	function loadMore() 
 	{
-			setLimitWeapons((prevLimitWeapons) => prevLimitWeapons + 21 );
+		setLimitWeapons((prevLimitWeapons) => prevLimitWeapons + 21 );
 	}
 
 	// Open and close modal
